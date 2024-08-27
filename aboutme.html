@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/aboutme.css" />
+    <title>aboutme</title>
+  </head>
+  <body>
+    <header>
+      <div class="hamburger-menu" v-show="showPageOne" id="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="side-menu" id="side-menu">
+        <ul>
+          <li><a href="home-page.html">Home</a></li>
+          <li><a href="aboutme.html">About</a></li>
+          <li><a href="works.html">Works</a></li>
+          <li><a href="email-form.html">Contact</a></li>
+        </ul>
+      </div>
+      <p>K<span :style="{ color: dotColor }" class="dot">●</span>ki</p>
+    </header>
+    <main>
+      <div id="app">
+        <div class="gray">
+          <div class="circle">●</div>
+          <div class="image">
+            <img
+              src="images/me.jpg"
+              alt="Mastering Purchase Order Management"
+            />
+          </div>
+          <div class="intor">
+            <div class="name">
+              <h3>K<span>●</span>ki Miz<span>●</span>guchi</h3>
+            </div>
+            <div class="text">
+              <p>{{ currentLanguage.aboutme }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="wave-container">
+          <div
+            v-for="(wave, index) in waves"
+            :key="index"
+            :class="['wave', wave.isRed ? 'red' : '']"
+          >
+            <div class="arrow"></div>
+          </div>
+        </div>
+        <div class="skills">
+          <div class="skill">
+            <div class="image1">
+              <img
+                src="images/javier-trueba-iQPr1XkF5F0-unsplash.jpg"
+                alt="Mastering Purchase Order Management"
+              />
+            </div>
+            <div class="languages">
+              <div class="title">
+                <h3>{{ currentLanguage.languages }}</h3>
+                <hr />
+              </div>
+              <div class="text1">
+                <p>{{ currentLanguage.explanation1 }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="languages1">
+              <div class="title1">
+                <h3>{{ currentLanguage.experience1 }}</h3>
+                <hr />
+              </div>
+              <div class="text2">
+                <p>{{ currentLanguage.explanation2 }}</p>
+              </div>
+            </div>
+            <div class="image1">
+              <img
+                src="images/javier-trueba-iQPr1XkF5F0-unsplash.jpg"
+                alt="Mastering Purchase Order Management"
+              />
+            </div>
+          </div>
+          <div class="skill">
+            <div class="image1">
+              <img
+                src="images/javier-trueba-iQPr1XkF5F0-unsplash.jpg"
+                alt="Mastering Purchase Order Management"
+              />
+            </div>
+            <div class="languages">
+              <div class="title">
+                <h3>{{ currentLanguage.experience2 }}</h3>
+                <hr />
+              </div>
+              <div class="text3">
+                <p>{{ currentLanguage.explanation3 }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <a href="https://www.facebook.com" class="social-icon"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/koki-mizoguchi-49150a303"
+            class="social-icon"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="https://www.instagram.com" class="social-icon"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="mailto:example@example.com" class="social-icon"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+          <div class="toggle-container">
+            <button class="toggle-button" @click="switchLanguage('ja')">
+              J
+            </button>
+            <button class="toggle-button" @click="switchLanguage('en')">
+              E
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="top-links">Twitter - Instagram - Facebook</div>
+      <div class="bottom-content">
+        <div class="icons">
+          <a
+            href="https://www.facebook.com"
+            class="social-icon"
+            style="color: #f41515"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/koki-mizoguchi-49150a303"
+            class="social-icon"
+            style="color: #f41515"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://www.instagram.com"
+            class="social-icon"
+            style="color: #f41515"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="mailto:example@example.com" class="social-icon"
+            ><i class="fa-solid fa-envelope" style="color: #f41515"></i
+          ></a>
+        </div>
+        <h2>Koki Mizoguchi</h2>
+        <p>&copy; 2024 Koki Mizoguchi. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="scripts/aboutme1.js"></script>
+    <script
+      src="https://kit.fontawesome.com/657e6a1368.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="path-to-the-file/splide.min.js"></script>
+  </body>
+</html>

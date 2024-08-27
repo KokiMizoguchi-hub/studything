@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/to-do-list.css" />
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="srceen">
+        <div class="bigbox">a</div>
+        <div class="side-meun">
+          <div>
+            <input
+              v-model="newTask"
+              placeholder="Add a new task"
+              @keyup.enter="addTask"
+            />
+            <select v-model="newTaskCategory">
+              <input
+                type="
+              file"
+                id="flieInput"
+                accept="c:\Users\user\Downloads\pexels-pixabay-415829.jpg"
+              />
+              <div>
+                <img
+                  src="c:\Users\user\Downloads\pexels-pixabay-415829.jpg"
+                  alt="アイコンのプレビュー"
+                  id="preview"
+                />
+              </div>
+            </select>
+            <div class="addtasks">
+              <button @click="addTask">十</button>
+              <p>タスクを追加</p>
+            </div>
+          </div>
+
+          <div
+            v-for="category in categories"
+            :key="category"
+            class="task-category"
+          >
+            <h2>
+              <i :class="getCategoryIcon(category)"></i>
+              {{ capitalize(category) }}
+            </h2>
+            <ul>
+              <li v-for="(task, index) in filteredTasks(category)" :key="index">
+                <input type="checkbox" v-model="task.done" />
+                <span :class="{ done: task.done }">{{ task.text }}</span>
+                <button @click="removeTask(index, category)">削除</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="task-category">
+            <h2>Everything</h2>
+            <ul>
+              <li v-for="(task, index) in tasks" :key="index">
+                <input type="checkbox" v-model="task.done" />
+                <span :class="{ done: task.done }"
+                  >{{ task.text }} ({{ task.category }})</span
+                >
+                <button @click="removeTask(index, task.category)">削除</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/657e6a1368.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="scripts/to-do-list.js"></script>
+  </body>
+</html>

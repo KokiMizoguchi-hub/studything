@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.task-category {
+    margin-bottom: 20px;
+}
+
+.task-category h2 {
+    margin: 10px 0;
+}
+
+/* アイコンの共通スタイル */
+.task-category i {
+    font-size: 24px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    color: rgb(38, 53, 122);
+}
+
+.screen {
+    display: flex;
+    justify-self: center;
+}
+
+.bigbox {
+    width: 80%;
+    height: auto;
+    float: right;
+    background-color: rgb(8, 8, 121);
+}
+
+.side-meun {
+    float: left;
+    width: 20%;
+    height: auto;
+    float: left;
+    background-color: rgb(65, 65, 80);
+}
+
+#preview {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.addtasks button {
+    border-radius: 15px;
+    background-color: rgb(148, 148, 35);
+    color: rgb(255, 255, 255);
+    float: left;
+}
+
+.addtasks p {
+    float: right;
+    font-weight: 300;
+}
+
+.today-category {
+    background-color: #ffdddd;
+    /* 今日の予定の背景色 */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+
+.tomorrow-category {
+    background-color: #ddffdd;
+    /* 明日の予定の背景色 */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.upcoming-category {
+    background-color: #ddddff;
+    /* 今週の予定の背景色 */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.noDueDate-category {
+    background-color: #f0f0f0;
+    /* 日にちは決まってないの背景色 */
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

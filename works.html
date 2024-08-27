@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/works.css" />
+    <title>works</title>
+  </head>
+  <body>
+    <header>
+      <div class="hamburger-menu" v-show="showPageOne" id="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="side-menu" id="side-menu" id="app">
+        <ul>
+          <li><a href="home-page.html">Home</a></li>
+          <li>
+            <a href="aboutme.html">About</a>
+          </li>
+          <li>
+            <a href="works.html">Works</a>
+          </li>
+          <li>
+            <a href="email-form.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <p>K<span :style="{ color: dotColor }" class="dot">●</span>ki</p>
+    </header>
+    <div id="app">
+      <div class="wave-container">
+        <div class="wave">
+          <div class="arrow"></div>
+        </div>
+        <div class="wave red">
+          <div class="arrow"></div>
+        </div>
+      </div>
+      <div class="gray"></div>
+      <div class="gray-box">
+        <div class="title" style="color: #000000">
+          <h2>{{ texts[currentLanguage].recent }}</h2>
+        </div>
+        <div class="articles-container">
+          <div class="article">
+            <a href="study-aborad2.html">
+              <img
+                src="images\main-page.jpg"
+                alt="Mastering Purchase Order Management"
+              />
+              <h3>{{ texts[currentLanguage].Mastering}}</h3>
+              <p>{{ texts[currentLanguage].Theimportance }}</p>
+            </a>
+          </div>
+          <div class="article">
+            <a href="study-abroad.html">
+              <img src="images\38.jpg" alt="E-Invoicing 101" />
+              <h3>{{ texts[currentLanguage]. Mastering1 }}</h3>
+              <p>{{ texts[currentLanguage].Theimportance1 }}</p>
+            </a>
+          </div>
+          <div class="article">
+            <a href="aaa.html">
+              <img src="images\124935....1-4.jpg" alt="E-Invoicing 101" />
+              <h3>{{ texts[currentLanguage].Mastering2}}</h3>
+              <p>{{ texts[currentLanguage].Theimportance2 }}</p>
+            </a>
+          </div>
+          <div class="article">
+            <a href="page4.html">
+              <img src="images\124935....1-4.jpg" alt="E-Invoicing 101" />
+              <h3>{{ texts[currentLanguage].Mastering3}}</h3>
+              <p>{{ texts[currentLanguage].Theimportance3 }}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="icon-container">
+        <a href="https://www.facebook.com" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/koki-mizoguchi-49150a303"
+          class="social-icon"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:example@example.com" class="social-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <div class="toggle-container">
+          <button
+            class="toggle-button"
+            id="language-button"
+            @click="toggleLanguage"
+          >
+            J
+          </button>
+          <button
+            class="toggle-button"
+            id="language-button"
+            @click="toggleLanguage"
+          >
+            E
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="top-links">Twitter - Instagram - Facebook</div>
+      <div class="bottom-content">
+        <div class="icons">
+          <a
+            href="https://www.facebook.com"
+            class="social-icon1"
+            style="color: #f41515"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/koki-mizoguchi-49150a303"
+            class="social-icon1"
+            style="color: #f41515"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://www.instagram.com"
+            class="social-icon1"
+            style="color: #f41515"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:example@example.com" class="social-icon1">
+            <i class="fa-solid fa-envelope" style="color: #f41515"></i>
+          </a>
+        </div>
+        <h2>Koki Mizoguchi</h2>
+        <p>&copy; 2024 Koki Mizoguchi. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="scripts/side-page.js"></script>
+    <script
+      src="https://kit.fontawesome.com/657e6a1368.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
